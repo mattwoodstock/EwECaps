@@ -4,7 +4,7 @@ A repository that takes Ecopath with Ecosim with Ecospace output and calculates 
 The repository has two R files: functions.R and caps_from_ewe.R. To run, open the R project ("Ecosystem Caps") and the caps_from_ewe.R file. This file will automatically source the functions.R file. There are 4 dependencies: dplyr, tidyr, ggplot2, stringr. The code is designed to be run straight through. The user must manually input several items to properly run the file (shown below). It is recommended that the user make the adjustments and the run the full file so the final table is appropriately output without duplicate information.
 
 *Manual Intervention Items*
-1) L6: A group info table that has the following structure, where Residency determines if the animal is resident or not, SEDAR determines if the animal is a SEDAR assessed species, and Landings_Prop is the proportion of catches that are landings, since Ecospace_Annual_Average_Catch.csv is both landings and dead discards.
+1) L6: A group info table that has the following structure, where Residency determines if the animal is resident or not, SEDAR determines if the animal is a SEDAR assessed species, and Landings_Prop is the proportion of catches that are landings, since Ecospace_Annual_Average_Catch.csv is both landings and dead discards. This can be adjusted in anyway you need to slice your groups. You would just need to give an appropriate dataframe to the "keep_df" parameter in the "ecosystem_caps_avg...()" function. An example of adding a subset df to those functions can be seen in lines 93 & 99 of the main R file.
 
 | Group_Name             | Residency | SEDAR | Landings_Prop |
 |------------------------|-----------|-------|----------------|
